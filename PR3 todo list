@@ -1,0 +1,24 @@
+def write():
+    with open('todolist.txt', 'a') as f :
+        f.write(input("Enter you todo: "))
+
+def read():
+    with open('todolist.txt','r') as f:
+        while True:
+            line=f.readline()
+            if not line:
+                break 
+            print(line)
+
+print("Wellcome to todolist python program")
+s = int(input(''' 
+    Select operation
+    1 - Write todo
+    2 - Read
+    3 - Exit
+'''))
+
+if s ==1:
+    write()
+elif s==2:
+    read()
